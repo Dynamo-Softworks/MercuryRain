@@ -1,5 +1,7 @@
 package part;
 
+import java.util.ArrayList;
+
 public class part{
 	
 	//Generic Variables
@@ -34,8 +36,22 @@ public class part{
 	//4=massive(torso, shield)
 	private int sizeLevel;
 	
+	//contains hardpoints
+	private ArrayList[] hardpoints=new ArrayList[5];
+	
+	//contains max hardpoint numbers
+	private int s0;
+	private int s1;
+	private int s2;
+	private int s3;
+	private int s4;
+	
 	//current amount of heat
 	private int heat;
+	
+	private double heatTolerance=1;
+	
+	private int heatThreshold;
 	
 	//minimum power requirment to operate at all
 	private int powerRequirement;
@@ -244,6 +260,14 @@ public class part{
 		heat=temp;
 	}
 	
+	public int getHeatThreshold(){
+		return heatThreshold;
+	}
+	
+	public void setHeatThreshold(int temp){
+		heatThreshold=temp;
+	}
+	
 	//getter setter for double
 	
 	public double getMass(){
@@ -270,6 +294,14 @@ public class part{
 		efficency=temp;
 	}
 	
+	public double getHeatTolerance(){
+		return heatTolerance;
+	}
+	
+	public void setHeatTolerance(double temp){
+		heatTolerance=temp;
+	}
+	
 	//setter and getters for bools
 	
 	public boolean getActive(){
@@ -287,5 +319,16 @@ public class part{
 	public void setExistence(boolean temp){
 		existence=temp;
 	}
+	
+	//setter getters for strings
+	
+	public String getPartName(){
+		return partName;
+	}
+	
+	public void setPartName(String temp){
+		partName=temp;
+	}
+	
 	
 }
