@@ -21,19 +21,19 @@ public class part{
 	//metric ton
 	private double mass;
 	
-	//normal part weight
+	//normal part mass
 	private double nominalMass;
 	
 	//number of statpoints available in generation
 	private int techLevel;
 	
 	//determines hardpoints number modifier, and also likelyhood of being hit. 
-	//0=component(heat sink, vane, servo <5% chance of hit)
+	//1=component(heat sink, vane, servo <5% chance of hit)
 	//size examples below based off of a medium sized mech
-	//1=small(smaller weapon, comms, small plate, low cal weapon, cockpit 10%-20%) 
-	//2=medium(larger weapon, medium armour plate, 20%-35%)
-	//3=large(arm, leg, primary weapon 35%-55%)
-	//4=massive(torso, shield)
+	//2=small(smaller weapon, comms, small plate, low cal weapon, cockpit 10%-20%) 
+	//3=medium(larger weapon, medium armour plate, 20%-35%)
+	//4=large(arm, leg, primary weapon 35%-55%)
+	//5=massive(torso, shield)
 	private int sizeLevel;
 	
 	//contains hardpoints
@@ -49,7 +49,7 @@ public class part{
 	//current amount of heat
 	private int heat;
 	
-	private double heatTolerance=1;
+	private double heatTolerance;
 	
 	private int heatThreshold;
 	
@@ -65,7 +65,7 @@ public class part{
 	//how much power the part is being provided
 	private int currentPower;
 	
-	private double efficency=1;
+	private double efficency;
 	
 	//current list of status. Stores both debuffs and buffs.
 	//private ArrayList<status> statusList= new ArrayList<status>();
@@ -91,6 +91,9 @@ public class part{
 	public part(){
 		existence=true;
 		active=true;
+		efficency=1;
+		heatTolerance=1;
+		
 	}
 	
 	public part(String tempName, int tempID, int tempHullPoints, int tempMaxHullPoints, double tempMass, int tempTechLevel, 
@@ -119,7 +122,11 @@ public class part{
 		
 		maxPower=tempMaxPower;
 		
-
+		existence=true;
+		active=true;
+		efficency=1;
+		heatTolerance=1;
+		
 		
 		
 	}
@@ -267,14 +274,14 @@ public class part{
 	public void setHeatThreshold(int temp){
 		heatThreshold=temp;
 	}
-	
+		
 	//getter setter for double
 	
 	public double getMass(){
 		return mass;
 	}
 	
-	public void setMass(int temp){
+	public void setMass(double temp){
 		mass=temp;
 	}
 	
