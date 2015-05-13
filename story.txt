@@ -1,0 +1,94 @@
+#@#@#!$#$%^^&&^%$
+
+SYSTEM REBOOT...
+CRASH DETECTED
+
+WARNING: DAYLIGHT DETECTED! RADIATION LEVELS ARE NOT SAFE!
+
+WARNING: SYSTEM UNSTABLE!
+
+WARNING: LIFE SUPPORT IS OFFLINE!
+
+WARNING: PILOT NOT FOUND!
+
+WARNING: PILOT NOT FOUND!
+
+WARNING: PILOT NOT FOUND!
+
+>>> OH. THERE YOU ARE. I'M SORRY. I'M SO SORRY. I... I COULDN'T...
+
+WARNING: AUTOMATION SYSTEM OFFLINE!
+ 
+DEBUG: SELF TERMINATION DETECTED. STORING SAVE STATE.
+
+
+STATUS CHECK>>> 
+	COOLING SYSTEM: DAMAGED!
+	DISPLAY SYSTEM: OK!
+	WEAPONS SYSTEM: OFFLINE!
+	TARGETING SYSTEM: OFFLINE!
+	SENSORS: OFFLINE!
+	PROCESSOR: OK!
+	LIFE_SUPPORT: OFFLINE!
+	INPUT: OK!
+
+TASK: run onabsence.exe
+
+//Begin IOStream
+
+Mercury.
+
+A planet far from what one would consider a suitable climate for human habitation. 
+I don't even know if mercury counts as having a climate.  On one side it is blasted by radiation from the sun. 
+It kills in minutes, and even the best shielding we can mount on the mechs isn't strong enough to keep you alive for more than a few days.
+And even then, you're screwed up afterwards. You'll then blow all your money on cellular repair, assuming you have any (money that is), 
+and hope the cancer doesn't kill you in the next few years. On the other side is a surface so cold that on earth such temperatures 
+would freeze the air itself into ice. Going out there... I don't know anybody who has made it back. In the middle is a zone that is 
+halfway between hell and hell frozen over. The temperatures are manageable and there is some light from the sun. The radiation is 
+still bad, but the meds will keep you on your feet for a few years until the next you can get your body healed up with the expensive 
+machines they have on the medical carrier. Underground is even better, and the mines are lucrative. But the mines are expensive to live 
+in. Most live on the surface. On the carriers.
+
+The problem with living in the realm of eternal twilight is that it moves. 
+It is hard to live in a place where the "place" is actually a moving spot on the ground, 
+and the area around the spot will kill you. Solution? Some NASA techie had the idea of putting colonies on giant treads. 
+Genius right? They only break constantly, and take more money in maintenance than it would to just live underground. But the PR of 
+having the longest running moving construct in the solar system is hard to pass up. So we across as a migrant fleet, trundling across 
+the surface at 11 kilometers per hour to stay in the terminator, the twilight zone between night and dark, in a vast assortment of 
+glorified, but really rather large, space trucks. The official term is “carrier”, but they are really just some space trucks. We have 
+a few sister fleets, all much nicer than Equatorial 001 (the fleet I come from), that move around the poles. A few other above ground 
+colonies exist at the poles, but living up there requires real cash. Some of the carriers are stupidly large, some are pretty big, and 
+some are only a few meters long. Robots zip around among the slow moving carriers, delivering people and supplies to various places in 
+the fleet. Every year, we make a run at the mines to load up on raw materials, and we always collect raw material from the surface, so we 
+can manufacture replacement components and whatever marketable products people come up with.
+
+But not this year.
+
+There was an accident. Or there probably was an accident. Or it wasn’t an accident. I don’t know. Bottom line, the flagship of 
+Equatorial 001 detonated, probably killing everyone on board. I didn’t stay to find out, because stuff went downhill from there. 
+Before we knew what happened, one of the tokomaks on board the medical carrier went, and then another, and another. I had been doing 
+maintenance on one of the outer lying carriers, and I was able to escape. My mech was equipped to survive in the wastes for a while, 
+but not to survive a bunch of fusion generators blowing up at the same time. The EMP’s crippled my suit’s systems, but I was able to hear 
+the other fleets gearing up for war. You see, there are a few groups on mercury. One was sent from a coalition of the US, Canada, 
+Russia, Britain, and Japan (collectively called the United Fleets, or the UF), and the other was sent from the AIC, the Associated 
+Indonesian Conference. After some resource disputes when the AIC stopped sending supplies to their fleets, the UF and AIC have been at 
+each other ever since. I guess the two just needed an excuse to fight. Not sure why, we don’t have enough here as it is. 
+Maybe this will bring the attention of Earth back here, to send aid. Or everyone will die. Who knows.
+
+My mech is finished. My generator was going critical, so I had to shut it down, my solar panels were shattered in the tokomak chain 
+reaction, and I can’t exist on the RTGs. Life support is going to shut down soon.
+
+I hope you find this, and now know why the UF and AIC are going to war. I hope you know that it was pointless, and was probably 
+caused because someone forgot to do maintenance on one of the flagships's antimatter containment systems. 
+I hope you can stop it. 
+Or maybe you will find this hundreds of years from now, and this will answer the burning questions of the first War on Mercury or 
+whatever the hell they call this. Or maybe nobody will find this, and I’m just wasting my time typing instead of thinking about 
+whatever I am supposed to think about. 
+
+Let CIL know it wasn’t her fault. I shut her off, and she doesn’t have access to my personal programs. 
+
+I miss the rain.
+
+Good bye.
+
+//end IO Stream

@@ -2,12 +2,13 @@ package tech;
 
 import part.*;
 
-import java.math.*;
+
 
 //generates parts
 public class tech{
 	
 	long partID_Counter;
+	materialsLibrary lib = new materialsLibrary();
 	
 	//biases must add to 10. bias can be negative
 	public part generatePart(String name, int size, int techLevel, int speedBias, int powerBias, int materialsBias){
@@ -16,6 +17,7 @@ public class tech{
 		genPart.setPartName(name);
 		genPart.setTechLevel(techLevel);
 		genPart.setSizeLevel(size);
+		genPart.setMaterial(lib.getMaterial(0));
 		
 		int techPoints=(int)(25*(Math.log(10*techLevel))-49);
 		
@@ -35,8 +37,9 @@ public class tech{
 		genPart.setMaxHullPoints(this.generateHullPoints(genPart, materialsTechPoints));
 		
 		//generate basic power parameters
-		
-		
+		genPart.setMaxPower(this.generateMaxPower(genPart, powerTechPoints));
+		genPart.setMaxPower(this.generatePowerNormal(genPart));
+		genPart.setMaxPower(this.generatePowerRequirment(genPart));
 		partID_Counter++;
 		
 		return genPart;
@@ -75,7 +78,7 @@ public class tech{
 		//idea being mass is based off material, size, a random element, and speed points 
 		double volume=(double)temp.getSizeLevel()*(Math.random()*(1.25-.75)+.75);
 		
-		double density=temp.getMaterialCode()-(((double)speedTechPoints)*20);
+		double density=temp.getMaterial().getDensity()-(((double)speedTechPoints)*5);
 		
 		nominalMass=(density*volume)/1000;
 		
@@ -86,12 +89,29 @@ public class tech{
 		int hullPoints;
 		
 		//idea being hullPoints are based off size, material, mass, and the number of materials points
-		hullPoints=(int)((temp.getMass()*(temp.getMaterialCode()/(1/temp.getSizeLevel())*100))*materialTechPoints);
+		hullPoints=(int)((temp.getMass()*(temp.getMaterial().getDensity()/(1/temp.getSizeLevel())*100))*materialTechPoints);
 		
 		
 		return hullPoints;
 	}
 	
-	public int generateMaxPower(part temp)
+	public int generateMaxPower(part temp, int powerTechPoints){
+		int maxPower=0;
+		
+		maxPower=(int)(powerTechPoints/(temp.getMaterial().getConductivity()*10000));
+		
+		return maxPower;
+	}
 	
+	public int generatePowerNormal(part temp){
+		int powerNormal=(int)(.5*(temp.getMaxPower()));
+		return powerNormal;
+	}
+	
+	public int generatePowerRequirment(part temp){
+		int powerRequirment=(int)(.5*(temp.getPowerNormal()));
+		return powerRequirment;
+	}
+
 }
+	

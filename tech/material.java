@@ -4,6 +4,7 @@ package tech;
 //also may be able to apply special effects.
 public class material{
 	
+	//in kg/m^3
 	private double density;
 	
 	//determines how fast material heats in joules/kelvin

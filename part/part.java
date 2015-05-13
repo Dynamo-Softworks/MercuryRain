@@ -1,6 +1,7 @@
 package part;
 
 import java.util.ArrayList;
+import tech.material;
 
 //a generic part class. These objects make up mechs. Not sure how to proceed yet though.
 public class part{
@@ -82,7 +83,9 @@ public class part{
 	//Use to also check if something needs to be returned from statusList.
 	private int statusSummary;
 	
+	
 */
+	private material material;
 	
 	private boolean active=true;
 		
@@ -99,7 +102,7 @@ public class part{
 	
 	public part(String tempName, int tempID, int tempHullPoints, int tempMaxHullPoints, double tempMass, int tempTechLevel, 
 			int tempSizeLevel, int tempHeat, 
-			int tempPowerNormal, int tempPowerRequirment, int tempMaxPower){
+			int tempPowerNormal, int tempPowerRequirment, int tempMaxPower, material tempMaterial){
 		
 		partName=tempName; 
 		
@@ -128,7 +131,7 @@ public class part{
 		efficency=1;
 		heatTolerance=1;
 		
-		
+		material=tempMaterial;
 		
 	}
 	
@@ -336,6 +339,14 @@ public class part{
 	
 	public void setPartName(String temp){
 		partName=temp;
+	}
+
+	public material getMaterial() {
+		return material;
+	}
+
+	public void setMaterial(material material) {
+		this.material = material;
 	}
 	
 	
