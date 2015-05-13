@@ -1,5 +1,6 @@
 package pilot;
 
+//the Players' pilots. Stats determine dice roll modifiers.
 public class pilot{
 	
 	private String name;

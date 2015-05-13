@@ -2,6 +2,7 @@ package part;
 
 import java.util.ArrayList;
 
+//a generic part class. These objects make up mechs. Not sure how to proceed yet though.
 public class part{
 	
 	//Generic Variables

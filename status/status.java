@@ -1,5 +1,6 @@
 package status;
 
+//These apply status effects to parts. not sure how to proceed here.
 public class status{
 	private int statusType;
 	private String typeName;

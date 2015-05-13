@@ -4,6 +4,7 @@ import java.util.*;
 
 import part.part;
 
+//the player's avatar. This class handles the mech's construction, handles firing, targeting, etc. No where near done.
 public class mech{
 	
 	 //contains mechparts

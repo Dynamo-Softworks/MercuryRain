@@ -4,6 +4,7 @@ import java.io.PrintWriter;
 
 import pilot.pilot;
 
+//saves stuff to text files, right now just does Pilots.
 public class save{
 	
 	private PrintWriter writer;

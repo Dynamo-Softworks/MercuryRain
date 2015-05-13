@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import pilot.pilot;
 
+//handles loading of stuff from text files. Right now just loads Pilots.
 public class load{
 	private String saveFileHandler;
 	

@@ -1,5 +1,7 @@
 package tech;
 
+//plugs into parts to provide base material stats to help in description and generation. 
+//also may be able to apply special effects.
 public class material{
 	
 	private double density;
