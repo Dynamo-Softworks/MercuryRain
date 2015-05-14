@@ -1,6 +1,7 @@
 package part;
 
 import java.util.ArrayList;
+
 import tech.material;
 
 //a generic part class. These objects make up mechs. Not sure how to proceed yet though.
@@ -452,6 +453,53 @@ public class part{
 
 	public void setHardPointLimit4(int hardPointLimit4) {
 		this.hardPointLimit4 = hardPointLimit4;
+	}
+	
+	public void printAll(){
+		System.out.println("Name: "+getPartName());
+		System.out.println("Type: "+getPartType());
+		System.out.println("Size Level: "+getSizeLevel());
+		System.out.println("Tech Level: "+getTechLevel());
+		System.out.println("Hull Points: "+getHullPoints());
+		System.out.println("Max Hull Points: "+getMaxHullPoints());
+		System.out.println("Mass: "+getMass());
+		System.out.println("Nominal Mass: "+getNominalMass());
+		System.out.println("Heat Threshold: "+getHeatThreshold());
+		System.out.println("Heat Tolerance: "+getHeatTolerance());
+		System.out.println("Max Power: "+getMaxPower());
+		System.out.println("Normal Power: "+getPowerNormal());
+		System.out.println("Minimum Power: "+getPowerRequirment());
+		System.out.println("");
+		System.out.println("Material Values");
+		getMaterial().printAll();
+	}
+	
+	public void printAllDEBUG(){
+		System.out.println("Name: "+getPartName());
+		System.out.println("Type: "+getPartType());
+		System.out.println("Size Level: "+getSizeLevel());
+		System.out.println("Tech Level: "+getTechLevel());
+		System.out.println("Hull Points: "+getHullPoints());
+		System.out.println("Max Hull Points: "+getMaxHullPoints());
+		System.out.println("Mass: "+getMass());
+		System.out.println("Nominal Mass: "+getNominalMass());
+		System.out.println("Heat Threshold: "+getHeatThreshold());
+		System.out.println("Heat Tolerance: "+getHeatTolerance());
+		System.out.println("Max Power: "+getMaxPower());
+		System.out.println("Normal Power: "+getPowerNormal());
+		System.out.println("Minimum Power: "+getPowerRequirment());
+		System.out.println("");
+		System.out.println("Material Values");
+		getMaterial().printAll();
+		System.out.println("");
+		System.out.println("Debug Values");
+		System.out.println("Seed Value: "+getSeedValue());
+		System.out.println("Material Bias: "+getMatBias());
+		System.out.println("Power Bias: "+getPowBias());
+		System.out.println("Speed Bias: "+getSpeedBias());
+		System.out.println("Material Code: "+getMaterialCode());
+		
+		
 	}
 	
 	

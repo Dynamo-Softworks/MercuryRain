@@ -32,9 +32,9 @@ public class tech{
 		int techPoints=(int)(25*(Math.log(10*techLevel))-49);
 		
 		//divie up the points
-		int materialsTechPoints=techPoints*(materialsBias/10);
-		int speedTechPoints=techPoints*(speedBias/10);
-		int powerTechPoints=techPoints*(powerBias/10);
+		double materialsTechPoints=techPoints*materialsBias/100;
+		double speedTechPoints=techPoints*speedBias/100;
+		double powerTechPoints=techPoints*powerBias/100;
 		
 		//save biases for regeneration
 		genPart.setPowBias(powerBias);
@@ -42,23 +42,24 @@ public class tech{
 		genPart.setSpeedBias(speedBias);
 		
 		//generate thermal properties
-		genPart.setHeatThreshold(this.generateHeatThreshold(materialsTechPoints));
-		genPart.setHeatTolerance(this.generateHeatTolerance(materialsTechPoints));
+		genPart.setHeatThreshold(this.generateHeatThreshold(genPart,(int) materialsTechPoints));
+		genPart.setHeatTolerance(this.generateHeatTolerance((int) materialsTechPoints));
 		genPart.setHeat(0);
 		
 		//generate hull points and mass
-		genPart.setNominalMass(this.generateMass(genPart, speedTechPoints));
+		genPart.setNominalMass(this.generateMass(genPart, (int) speedTechPoints));
 		genPart.setMass(genPart.getNominalMass());
-		genPart.setMaxHullPoints(this.generateHullPoints(genPart, materialsTechPoints));
+		genPart.setMaxHullPoints(this.generateHullPoints(genPart, (int) materialsTechPoints));
+		genPart.setHullPoints(genPart.getMaxHullPoints());
 		
 		//generate basic power parameters
-		genPart.setMaxPower(this.generateMaxPower(genPart, powerTechPoints));
-		genPart.setMaxPower(this.generatePowerNormal(genPart));
-		genPart.setMaxPower(this.generatePowerRequirment(genPart));
+		genPart.setMaxPower(this.generateMaxPower(genPart, (int) powerTechPoints));
+		genPart.setPowerNormal(this.generatePowerNormal(genPart));
+		genPart.setPowerRequirment(this.generatePowerRequirment(genPart));
 		genPart.setID(partID_Counter);
 		partID_Counter++;
 		
-		System.out.println("OK");
+		//System.out.println("OK");
 		
 		return genPart;
 		
@@ -80,11 +81,11 @@ public class tech{
 		return heatStats;
 	}
 	
-	public int generateHeatThreshold(int allocatedPoints){
+	public int generateHeatThreshold(part temp,int allocatedPoints){
 		int heatStats;
 		
 		//idea being threshold is based off allocated points and material
-		heatStats=(100+(20*(allocatedPoints/2)));
+		heatStats=(int) (temp.getMaterial().getMeltingPoint()+(20*(allocatedPoints/2)));
 		
 		return heatStats;
 	}
@@ -107,7 +108,7 @@ public class tech{
 		int hullPoints;
 		
 		//idea being hullPoints are based off size, material, mass, and the number of materials points
-		hullPoints=(int)((temp.getMass()*(temp.getMaterial().getDensity()/(1/(temp.getSizeLevel()+1)*100))*materialTechPoints));
+		hullPoints=(int)(materialTechPoints*temp.getSizeLevel()*temp.getMaterial().getDensity()*temp.getMass()/100);
 		
 		
 		return hullPoints;
@@ -116,8 +117,10 @@ public class tech{
 	public int generateMaxPower(part temp, int powerTechPoints){
 		int maxPower=0;
 		
-		maxPower=(int)(powerTechPoints/(temp.getMaterial().getConductivity()*10000));
-		
+		double maxPower2=(powerTechPoints/(temp.getMaterial().getConductivity()*100000));
+		//System.out.println(maxPower2);
+		maxPower=(int) Math.round(maxPower2);
+		//System.out.println(maxPower);
 		return maxPower;
 	}
 	
@@ -134,49 +137,55 @@ public class tech{
 	public int[] generateRandomBias(){
 		int[] bias=new int[3];
 		
-		int bias0=10;
-		int bias1=10;
-		int bias2=10;
+		int bias0=100;
+		int bias1=100;
+		int bias2=100;
 		
-		while(bias0>8){
-			bias0=(int)(Math.random()*10+1);
-			System.out.println(bias0);
-			System.out.println("loopa");
+		while(bias0>95){
+			bias0=(int)(Math.random()*100+1);
+			
 		}
 		
-		while(bias1>9-bias0){
-			bias1=(int)(Math.random()*10+1);
-			System.out.println(bias1);
-			System.out.println("loopb");
+		while(bias1>95-bias0){
+			bias1=(int)(Math.random()*100+1);
+			
 		}
 		
-		bias2=10-bias0-bias1;
+		bias2=100-bias0-bias1;
 		
-		int die=(int)Math.random()*6;
+		double die=Math.random()*5+1;
+		die=Math.round(die);
+		//System.out.println(die);
 		
 		if(die<=2){
 			bias[0]=bias0;
 			bias0=bias1;
 			bias1=bias2;
+			//System.out.println("a");
 		}
 		
 		else if(die<=4){
 			bias[0]=bias1;
 			bias1=bias2;
+			//System.out.println("b");
 		}
 		else{
 			bias[0]=bias2;
+			//System.out.println("c");
 		}
 		
-		die=(int)Math.random()*6;
+		die=Math.random()*6+1;
+		die=Math.round(die);
 		
 		if(die<=3){
 			bias[1]=bias1;
 			bias[2]=bias0;
+			//System.out.println("1");
 		}
 		else{
 			bias[1]=bias0;
 			bias[2]=bias1;
+			//System.out.println("2");
 		}
 		
 		
