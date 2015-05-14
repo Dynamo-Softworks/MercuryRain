@@ -11,7 +11,7 @@ import part.*;
 public class save{
 	
 	//private PrintWriter writerPilot;
-	private PrintWriter writerMech;
+	private static PrintWriter writerMech;
 	//private PrintWriter writerInventory;
 	
 	public save(String fileHandler) throws IOException{
@@ -45,8 +45,9 @@ public class save{
 		 writerMech.println(saved.getMatBias());
 		 writerMech.println(saved.getPowBias());
 		 writerMech.println(saved.getSpeedBias());
+		 System.out.println(saved.getSeedValue());
 		 writerMech.println(saved.getSeedValue());
-		 System.out.println("OK");
+		 System.out.println("OK2222");
 	}
 	public void saveMechPartDEBUG(part saved) throws IOException{
 		 System.out.println(saved.getPartName());

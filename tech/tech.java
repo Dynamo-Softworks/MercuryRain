@@ -150,11 +150,7 @@ public class tech{
 			System.out.println("loopb");
 		}
 		
-		while(bias2>8-bias1){
-			bias2=(int)(Math.random()*10+1);
-			System.out.println(bias2);
-			System.out.println("loopc");
-		}
+		bias2=10-bias0-bias1;
 		
 		int die=(int)Math.random()*6;
 		

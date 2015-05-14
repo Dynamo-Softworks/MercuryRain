@@ -19,7 +19,7 @@ public class mainLoop{
 		
 		tech partGenerator=new tech();
 		
-		save mechSaver=new save("test");
+		save mechSaver=new save("nate");
 		
 		int[] bias= new int[3];
 		
