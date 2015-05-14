@@ -8,11 +8,19 @@ public class part{
 	
 	//Generic Variables
 	
-	//name of part. Arm, leg, blaster MK3, etc.
+	//name of part. Arm 9000, leg 003, blaster MK3, etc.
 	private String partName;
 	
+	private String partType;
+	
+	private int matBias;
+	private int powBias;
+	private int speedBias;
+	private double seedValue;
+	private int materialCode;
+	
 	//unique identifier
-	private int ID;
+	private long ID;
 	
 	//max hp
 	private int maxHullPoints;
@@ -39,14 +47,14 @@ public class part{
 	private int sizeLevel;
 	
 	//contains hardpoints
-	private ArrayList[] hardpoints=new ArrayList[5];
+	private ArrayList<ArrayList<part>> hardpoints=new ArrayList<ArrayList<part>>();
 	
 	//contains max hardpoint numbers
-	private int s0;
-	private int s1;
-	private int s2;
-	private int s3;
-	private int s4;
+	private int hardPointLimit0;
+	private int hardPointLimit1;
+	private int hardPointLimit2;
+	private int hardPointLimit3;
+	private int hardPointLimit4;
 	
 	//current amount of heat
 	private int heat;
@@ -100,9 +108,9 @@ public class part{
 		
 	}
 	
-	public part(String tempName, int tempID, int tempHullPoints, int tempMaxHullPoints, double tempMass, int tempTechLevel, 
+	public part(String tempName, long tempID, int tempHullPoints, int tempMaxHullPoints, double tempMass, int tempTechLevel, 
 			int tempSizeLevel, int tempHeat, 
-			int tempPowerNormal, int tempPowerRequirment, int tempMaxPower, material tempMaterial){
+			int tempPowerNormal, int tempPowerRequirment, int tempMaxPower, material tempMaterial, int tempCode){
 		
 		partName=tempName; 
 		
@@ -132,6 +140,7 @@ public class part{
 		heatTolerance=1;
 		
 		material=tempMaterial;
+		materialCode=tempCode;
 		
 	}
 	
@@ -191,12 +200,12 @@ public class part{
 	
 	//getter setters for int
 	
-	public int getID(){
+	public long getID(){
 		return ID;
 	}
 	
-	public void setID(int temp){
-		ID=temp;
+	public void setID(long partID_Counter){
+		ID=partID_Counter;
 	}
 	
 	public int getMaxHullPoints(){
@@ -348,6 +357,105 @@ public class part{
 	public void setMaterial(material material) {
 		this.material = material;
 	}
+
+	public String getPartType() {
+		return partType;
+	}
+
+	public void setPartType(String partType) {
+		this.partType = partType;
+	}
+
+	public int getMatBias() {
+		return matBias;
+	}
+
+	public void setMatBias(int matBias) {
+		this.matBias = matBias;
+	}
+
+	public int getPowBias() {
+		return powBias;
+	}
+
+	public void setPowBias(int powBias) {
+		this.powBias = powBias;
+	}
+
+	public int getSpeedBias() {
+		return speedBias;
+	}
+
+	public void setSpeedBias(int speedBias) {
+		this.speedBias = speedBias;
+	}
+
+	public double getSeedValue() {
+		return seedValue;
+	}
+
+	public void setSeedValue(double d) {
+		this.seedValue = d;
+	}
+
+	public int getMaterialCode() {
+		return materialCode;
+	}
+
+	public void setMaterialCode(int materialCode) {
+		this.materialCode = materialCode;
+	}
+
+	public ArrayList<ArrayList<part>> getHardpoints() {
+		return hardpoints;
+	}
+
+	public void setHardpoints(ArrayList<ArrayList<part>> hardpoints) {
+		this.hardpoints = hardpoints;
+	}
+
+	public int getHardPointLimit0() {
+		return hardPointLimit0;
+	}
+
+	public void setHardPointLimit0(int hardPointLimit0) {
+		this.hardPointLimit0 = hardPointLimit0;
+	}
+
+	public int getHardPointLimit1() {
+		return hardPointLimit1;
+	}
+
+	public void setHardPointLimit1(int hardPointLimit1) {
+		this.hardPointLimit1 = hardPointLimit1;
+	}
+
+	public int getHardPointLimit2() {
+		return hardPointLimit2;
+	}
+
+	public void setHardPointLimit2(int hardPointLimit2) {
+		this.hardPointLimit2 = hardPointLimit2;
+	}
+
+	public int getHardPointLimit3() {
+		return hardPointLimit3;
+	}
+
+	public void setHardPointLimit3(int hardPointLimit3) {
+		this.hardPointLimit3 = hardPointLimit3;
+	}
+
+	public int getHardPointLimit4() {
+		return hardPointLimit4;
+	}
+
+	public void setHardPointLimit4(int hardPointLimit4) {
+		this.hardPointLimit4 = hardPointLimit4;
+	}
+	
+	
+	
 	
 	
 }

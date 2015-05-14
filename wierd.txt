@@ -1,0 +1,12 @@
+At around 12:19 AM on 05/14/2015 Mercury Rain output "okay" despite no strings or printlns with those characters existing during debugging.
+"OK" was being used as a debug string, however.
+
+After modifying the tech file, the behavior stopped. Undoing said changes did not result in the phenomenon again.
+
+Randomly happened again at 12:35
+appears like:
+
+okay
+okay
+
+with my stream of "OK"s following.
