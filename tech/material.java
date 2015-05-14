@@ -79,5 +79,14 @@ public class material{
 		this.density = density;
 	}
 	
+	public void printAll(){
+		System.out.println("Material Name: "+getMaterialName());
+		System.out.println("Density: "+getDensity());
+		System.out.println("Specific Heat: "+getSpecificHeat());
+		System.out.println("Melting Point: "+getMeltingPoint());
+		System.out.println("Conductivity: "+getConductivity());
+		
+	}
+	
 	
 }

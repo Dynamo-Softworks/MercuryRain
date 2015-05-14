@@ -13,7 +13,7 @@ class materialsLibrary{
 	private material steel;
 	
 	public materialsLibrary(){
-		steel=new material(8050, 1510, .466, (1.43*Math.pow(10, 7)), "steel");
+		steel=new material(8050, 1510, .466, (1.43*Math.pow(10, (0-7))), "steel");
 		
 		lib.add(steel);
 		

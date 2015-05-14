@@ -11,7 +11,7 @@ import part.*;
 public class save{
 	
 	//private PrintWriter writerPilot;
-	private static PrintWriter writerMech;
+	private PrintWriter writerMech;
 	//private PrintWriter writerInventory;
 	
 	public save(String fileHandler) throws IOException{

@@ -4,6 +4,7 @@ import pilot.*;
 import status.*;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import tech.*;
 import game.*;
@@ -25,8 +26,26 @@ public class mainLoop{
 		
 		mech testMech= new mech();
 		
+		ArrayList<part> mechFrame=testMech.getMechFrame();
+		
+		bias=partGenerator.generateRandomBias();
+		mechFrame.add(partGenerator.generatePart("testHull", 4, 5, bias[0], bias[1], bias[2], 0));
+		
+		mechFrame.get(0).printAllDEBUG();
+	
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/* Broken for some reason
 		while(count<10){
 			bias=partGenerator.generateRandomBias();
 			testMech.getMechFrame().add(partGenerator.generatePart("testComponent"+count, 0, 4, bias[0], bias[1], bias[2], 0));
@@ -69,7 +88,7 @@ public class mainLoop{
 		}
 		
 		
-		
+		*/
 	}
 
 }
