@@ -14,7 +14,7 @@ public class tech{
 		
 	}
 	
-	//biases must add to 10. bias can be negative
+	//biases must add to 100. bias can be negative
 	public part generatePart(String name, int size, int techLevel, int speedBias, int powerBias, int materialsBias, int materialCode){
 		part genPart= new part();
 		//part type. change based on the type of part being generated.
@@ -107,7 +107,12 @@ public class tech{
 	public int generateHullPoints(part temp, int materialTechPoints){
 		int hullPoints;
 		
-		//idea being hullPoints are based off size, material, mass, and the number of materials points
+		//idea being hullPoints are based off size, material, mass, density, and the number of materials points
+		//I would use some sort of hardness/toughness scale as well, but I am not sure which one I should use. 
+		//I'm going off the idea that at extreme velocities, dissipating kinetic energy is most important.
+		//High mass, high density parts will be able to absorb more energy with lower resulting kinetic energy.
+		//This does not account for elastic deformation though, thus why I want another material variable to 
+		//make armour less about weight and more about material type.
 		hullPoints=(int)(materialTechPoints*temp.getSizeLevel()*temp.getMaterial().getDensity()*temp.getMass()/100);
 		
 		

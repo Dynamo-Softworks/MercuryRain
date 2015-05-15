@@ -15,7 +15,11 @@ import map.*;
 public class mainLoop{
 	
 	
-	public static void main(String [] args) throws IOException{
+	public static void main(String [] args) throws IOException, InterruptedException{
+		
+		mainMenu menu=new mainMenu();
+		
+		/* testing of generator
 		int count=0;
 		
 		tech partGenerator=new tech();
@@ -34,6 +38,7 @@ public class mainLoop{
 		mechFrame.get(0).printAllDEBUG();
 	
 		
+		*/
 		
 		
 		
@@ -44,8 +49,7 @@ public class mainLoop{
 		
 		
 		
-		
-		/* Broken for some reason
+		 /*Broken for some reason
 		while(count<10){
 			bias=partGenerator.generateRandomBias();
 			testMech.getMechFrame().add(partGenerator.generatePart("testComponent"+count, 0, 4, bias[0], bias[1], bias[2], 0));
@@ -87,8 +91,8 @@ public class mainLoop{
 		
 		}
 		
-		
 		*/
+		
 	}
 
 }

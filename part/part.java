@@ -502,6 +502,14 @@ public class part{
 		
 	}
 	
+	public void printDEBUG(){
+		System.out.println("Seed Value: "+getSeedValue());
+		System.out.println("Material Bias: "+getMatBias());
+		System.out.println("Power Bias: "+getPowBias());
+		System.out.println("Speed Bias: "+getSpeedBias());
+		System.out.println("Material Code: "+getMaterialCode());
+	}
+	
 	
 	
 	
