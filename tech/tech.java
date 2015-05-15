@@ -113,7 +113,7 @@ public class tech{
 		//High mass, high density parts will be able to absorb more energy with lower resulting kinetic energy.
 		//This does not account for elastic deformation though, thus why I want another material variable to 
 		//make armour less about weight and more about material type.
-		hullPoints=(int)(materialTechPoints*temp.getSizeLevel()*temp.getMaterial().getDensity()*temp.getMass()/100);
+		hullPoints=(int)(materialTechPoints*(temp.getSizeLevel()+1)*temp.getMaterial().getDensity()*temp.getMass()/100);
 		
 		
 		return hullPoints;
@@ -124,18 +124,18 @@ public class tech{
 		
 		double maxPower2=(powerTechPoints/(temp.getMaterial().getConductivity()*100000));
 		//System.out.println(maxPower2);
-		maxPower=(int) Math.round(maxPower2);
+		maxPower=(int) Math.round(maxPower2)+1;
 		//System.out.println(maxPower);
 		return maxPower;
 	}
 	
 	public int generatePowerNormal(part temp){
-		int powerNormal=(int)(.5*(temp.getMaxPower()));
+		int powerNormal=(int)(.5*(temp.getMaxPower()))+1;
 		return powerNormal;
 	}
 	
 	public int generatePowerRequirment(part temp){
-		int powerRequirment=(int)(.5*(temp.getPowerNormal()));
+		int powerRequirment=(int)(.5*(temp.getPowerNormal()))+1;
 		return powerRequirment;
 	}
 	

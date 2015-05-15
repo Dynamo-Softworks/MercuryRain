@@ -81,7 +81,7 @@ public class mainMenu{
 			}
 			
 			else if(command.equals("build")){
-				System.out.println("SYSTEM: RUNNING PART BUILDER...");
+				
 				Thread.sleep(250);
 				System.out.println("SYSTEM: DO YOU WISH TO USE THE PROTOTYPE EDITOR? (Y/N)");
 				
@@ -107,10 +107,13 @@ public class mainMenu{
 					
 					System.out.println("ERROR: READ/WRITE TEST FAILED. DEFAULTING TO NO SAVE.");
 					
+					System.out.println("SYSTEM: RUNNING PART BUILDER...");
 					
+					buildLoop build= new buildLoop(stupidity);
 					
 				}
 				else{
+					System.out.println("SYSTEM: RUNNING PART BUILDER...");
 					buildLoop build= new buildLoop(stupidity);
 				}
 				
