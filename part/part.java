@@ -50,6 +50,14 @@ public class part{
 	//contains hardpoints
 	private ArrayList<ArrayList<part>> hardpoints=new ArrayList<ArrayList<part>>();
 	
+	private ArrayList<part> hard0=new ArrayList<part>();
+	private ArrayList<part> hard1=new ArrayList<part>();
+	private ArrayList<part> hard2=new ArrayList<part>();
+	private ArrayList<part> hard3=new ArrayList<part>();
+	private ArrayList<part> hard4=new ArrayList<part>();
+	
+	
+	
 	//contains max hardpoint numbers
 	private int hardPointLimit0;
 	private int hardPointLimit1;
@@ -106,6 +114,11 @@ public class part{
 		active=true;
 		efficency=1;
 		heatTolerance=1;
+		hardpoints.add(0, hard0);
+		hardpoints.add(1, hard1);
+		hardpoints.add(2, hard2);
+		hardpoints.add(3, hard3);
+		hardpoints.add(4, hard4);
 		
 	}
 	
@@ -142,6 +155,12 @@ public class part{
 		
 		material=tempMaterial;
 		materialCode=tempCode;
+		
+		hardpoints.add(0, hard0);
+		hardpoints.add(1, hard1);
+		hardpoints.add(2, hard2);
+		hardpoints.add(3, hard3);
+		hardpoints.add(4, hard4);
 		
 	}
 	
@@ -510,6 +529,76 @@ public class part{
 		System.out.println("Material Code: "+getMaterialCode());
 	}
 	
+	public part searchHardPoints(String name){
+		part temp= new part();
+		
+		int size= this.hardpoints.size();
+		int sizea;
+		int count=0;
+		int counta=0;
+		
+		boolean check=false;
+		
+		while(count<size && check==false){
+			
+			sizea=hardpoints.get(count).size();
+			while(counta<sizea && check==false){
+				if(hardpoints.get(count).get(counta).getPartName().equals(name)){
+					
+				}
+				
+				counta++;
+			}
+			
+			count++;
+		}
+		
+		return temp;
+	}
+
+	public ArrayList<part> getHard0() {
+		return hardpoints.get(0);
+	}
+
+	public void setHard0(ArrayList<part> hard0) {
+		this.hard0 = hard0;
+	}
+
+	public ArrayList<part> getHard1() {
+		return hardpoints.get(1);
+	}
+
+	public void setHard1(ArrayList<part> hard1) {
+		hardpoints.remove(1);
+		 hardpoints.add(1, hard1);
+	}
+
+	public ArrayList<part> getHard2() {
+		return hardpoints.get(2);
+	}
+
+	public void setHard2(ArrayList<part> hard2) {
+		hardpoints.remove(2);
+		 hardpoints.add(2, hard2);
+	}
+
+	public ArrayList<part> getHard3() {
+		return hardpoints.get(3);
+	}
+
+	public void setHard3(ArrayList<part> hard3) {
+		hardpoints.remove(3);
+		 hardpoints.add(3, hard3);
+	}
+
+	public ArrayList<part> getHard4() {
+		return hardpoints.get(4);
+	}
+
+	public void setHard4(ArrayList<part> hard4) {
+		 hardpoints.remove(4);
+		 hardpoints.add(4, hard4);
+	}
 	
 	
 	

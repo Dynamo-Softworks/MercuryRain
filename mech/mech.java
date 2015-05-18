@@ -2,13 +2,15 @@ package mech;
 
 import java.util.*;
 
-import part.part;
+import part.*;
+import part.core.*;
+import part.utility.*;
 
 //the player's avatar. This class handles the mech's construction, handles firing, targeting, etc. No where near done.
 public class mech{
 	
 	 //contains mechparts
-	 private ArrayList<part> mechFrame= new ArrayList<part>();
+	 private frame mechFrame= new frame();
 	 
 	 //contains player's inventory
 	 private ArrayList<part> mechInventory=new ArrayList<part>();
@@ -29,13 +31,13 @@ public class mech{
 
 
 
-	public ArrayList<part> getMechFrame() {
+	public part getMechFrame() {
 		return mechFrame;
 	}
 
 
 
-	public void setMechFrame(ArrayList<part> mechFrame) {
+	public void setMechFrame(frame mechFrame) {
 		this.mechFrame = mechFrame;
 	}
 
@@ -49,6 +51,32 @@ public class mech{
 
 	public void setMechInventory(ArrayList<part> mechInventory) {
 		this.mechInventory = mechInventory;
+	}
+	
+	public void addToFrame(part temp){
+		this.mechInventory.add(temp);
+	}
+	
+	public void removeFromFrame(part temp){
+		
+	}
+	
+	public void searchFrame(part temp){
+		
+		int size=this.mechFrame.getHardpoints().size();
+		int count=0;
+		boolean check=false;
+		
+		while(count<size && check==false){
+			
+			
+		}
+		
+		
+	}
+	
+	public void searchFrame(String temp){
+		
 	}
 	 
 	 //need save load

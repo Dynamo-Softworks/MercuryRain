@@ -5,6 +5,8 @@ package map;
 public class square{
 	
 	private boolean containsUnit;
+	
+	
 
 	
 }
