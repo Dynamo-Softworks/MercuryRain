@@ -563,9 +563,17 @@ public class part{
 	public void setHard0(ArrayList<part> hard0) {
 		this.hard0 = hard0;
 	}
+	
+	public part getHard0Part(int temp) {
+		return hardpoints.get(0).get(temp);
+	}
 
 	public ArrayList<part> getHard1() {
 		return hardpoints.get(1);
+	}
+	
+	public part getHard1Part(int temp) {
+		return hardpoints.get(1).get(temp);
 	}
 
 	public void setHard1(ArrayList<part> hard1) {
@@ -576,6 +584,10 @@ public class part{
 	public ArrayList<part> getHard2() {
 		return hardpoints.get(2);
 	}
+	
+	public part getHard2Part(int temp) {
+		return hardpoints.get(2).get(temp);
+	}
 
 	public void setHard2(ArrayList<part> hard2) {
 		hardpoints.remove(2);
@@ -585,6 +597,10 @@ public class part{
 	public ArrayList<part> getHard3() {
 		return hardpoints.get(3);
 	}
+	
+	public part getHard3Part(int temp) {
+		return hardpoints.get(3).get(temp);
+	}
 
 	public void setHard3(ArrayList<part> hard3) {
 		hardpoints.remove(3);
@@ -593,6 +609,10 @@ public class part{
 
 	public ArrayList<part> getHard4() {
 		return hardpoints.get(4);
+	}
+	
+	public part getHard4Part(int temp) {
+		return hardpoints.get(4).get(temp);
 	}
 
 	public void setHard4(ArrayList<part> hard4) {

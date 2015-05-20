@@ -99,7 +99,7 @@ public class tech{
 		
 		double density=temp.getMaterial().getDensity()-(((double)speedTechPoints)*5);
 		
-		nominalMass=(density*volume)/1000;
+		nominalMass=.1+(density*volume)/1000;
 		
 		return nominalMass;
 	}
@@ -113,7 +113,7 @@ public class tech{
 		//High mass, high density parts will be able to absorb more energy with lower resulting kinetic energy.
 		//This does not account for elastic deformation though, thus why I want another material variable to 
 		//make armour less about weight and more about material type.
-		hullPoints=(int)(materialTechPoints*(temp.getSizeLevel()+1)*temp.getMaterial().getDensity()*temp.getMass()/100);
+		hullPoints=(int)(materialTechPoints*(temp.getSizeLevel()+1)*temp.getMaterial().getDensity()*temp.getMass()/100)+1;
 		
 		
 		return hullPoints;

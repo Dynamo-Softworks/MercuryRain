@@ -17,9 +17,9 @@ public class mainLoop{
 	
 	public static void main(String [] args) throws IOException, InterruptedException{
 		
-		//mainMenu menu=new mainMenu();
+		mainMenu menu=new mainMenu();
 		
-		/* testing of generator*/
+		/* testing of generator
 		int count=0;
 		
 		tech partGenerator=new tech();
@@ -30,15 +30,22 @@ public class mainLoop{
 		
 		mech testMech= new mech();
 		
+		
+		
+		
+		
+		
+		
+		
 		part mechFrame=testMech.getMechFrame();
 		
 		bias=partGenerator.generateRandomBias();
-		mechFrame.getHardpoints()..add(partGenerator.generatePart("testHull", 4, 5, bias[0], bias[1], bias[2], 0));
+		mechFrame.getHard0().add(partGenerator.generatePart("testHull", 4, 5, bias[0], bias[1], bias[2], 0));
 		
-		mechFrame.getHardpoints(0).printAllDEBUG();
+		mechFrame.getHard0Part(0).printAllDEBUG();
 	
 		
-		
+		*/
 		
 		
 		

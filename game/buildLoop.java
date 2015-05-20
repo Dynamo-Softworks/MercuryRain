@@ -18,6 +18,7 @@ public class buildLoop{
 	//Determines if the build loop will allow negative biases. Probably results in dumb stuff like negative mass.
 	//Nathan, here you go. A variable, all for you.
 	boolean stupidity;
+	
 	boolean quit=false;
 	
 	Scanner reader= new Scanner(System.in);
